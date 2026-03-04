@@ -1,0 +1,27 @@
+
+n=int(input("ingrese un numero: "))
+
+if 100 <= n <=999:
+    print("es de 3 digitos")
+    C=n//100
+    r1=n%100
+    D=r1//10
+    U=r1%10
+    aux=0
+    if(C>D):
+        aux=C
+        C=D
+        D=aux
+    if(D>U):
+        aux=D
+        D=U
+        U=aux
+    if(C>D):
+        aux=C
+        C=D
+        D=aux
+else:
+    print("no es de 3 digitos")
+    
+print("Ascendente: ", C, D, U)
+print("Descendente: ", U, D, C)
