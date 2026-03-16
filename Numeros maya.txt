@@ -1,0 +1,44 @@
+print("¡Bienvenido!")
+
+opcion = 0
+
+while opcion != 2:
+    print("\n1. Convertir a número maya")
+    print("2. Salir")
+
+    opcion = int(input("Escoja su opción: "))
+
+    if opcion == 1:
+        numero = int(input("Ingrese el número que desea convertir (0-99): "))
+
+        if numero < 0 or numero > 99:
+            print("Número fuera de rango.")
+        else:
+            veintes = numero // 20
+            unidades = numero % 20
+
+            print("\nNúmero maya:\n")
+
+            # Nivel superior (veintenas)
+            if veintes > 0:
+                lineas = veintes // 5
+                puntos = veintes % 5
+
+                for i in range(lineas):
+                    print("-----")
+                for i in range(puntos):
+                    print("  •  ")
+
+                print("-----")  # separador visual
+
+            # Nivel inferior (unidades)
+            if unidades == 0:
+                print("  0  ")  # símbolo del cero maya simplificado
+            else:
+                lineas = unidades // 5
+                puntos = unidades % 5
+
+                for i in range(lineas):
+                    print("-----")
+                for i in range(puntos):
+                    print("  •  ")
