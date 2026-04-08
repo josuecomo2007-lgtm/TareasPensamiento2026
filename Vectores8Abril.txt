@@ -1,0 +1,64 @@
+fruta = ["fresa", "mango", "manzana", "coco"]
+numeros = [1,2,3,4,5,6,7,8,9]
+mixto =["fresa", 1, 2, "manzana"]
+
+for i in range (0, 4):
+    print (" \n", fruta[i])
+    
+print (" \n Append sirve para agregar elementos a la lista (banano)")
+fruta.append("banano") 
+print(" ", fruta)
+
+print (" \n Pop sirve para quitar elementos de la lista (fresa)")
+fruta.pop(0)
+print (" ", fruta)
+
+print (" \n ")
+for i in numeros:
+    print(" ", i)
+    
+print("\n\n\n Ejercicio 1:")
+ejercicio1 = [10, 423, 23,1, 56, 76, 43, 63, 72, 134, 86, 345, 65, 7, 4, 2, 986532]
+conteo = 0
+print (" ", ejercicio1)
+for i in ejercicio1:
+    if (i % 2 == 0):
+        conteo = conteo + 1
+
+print ("\n Hay", conteo, "numeros pares")
+
+
+print("\n\n\n Ejercicio 2:")
+ejercicio2 = [11, 423, 28,1, 51, 76, 44, 63, 72, 134, 86, 345, 65, 7, 4, 2, 986532, 3, 5, 17]
+impares =[]
+conteo = 0
+print (" ", ejercicio2)
+for i in ejercicio2:
+    if (i % 2 != 0):
+        impares.append(i)
+print("\n Estos son los impares: ")
+print(" ", impares)
+
+
+print("\n\n\n Ejercicio 3:")
+ejercicio3 = [3, 482, 17, 2048, 59, 76, 999, 12, 5012, 7, 88, 135, 246, 31, 4001, 62, 19, 875, 200, 43, 67, 1024, 5, 6, 777, 28, 91, 350, 13, 64000, 90909]
+pares = []
+impares = []
+conteo1 = 0
+conteo2 = 0
+
+print (" ", ejercicio3)
+for i in ejercicio3:
+    if (i % 2 == 0):
+        pares.append(i)
+        conteo1 = conteo1 + i
+    else:
+        impares.append(i)
+        conteo2 = conteo2 + i
+
+print("\n Estos son los pares: ")
+print(" ", pares)
+print("  La sumatoria de sus digitos es", conteo1)
+print("\n Estos son los impares: ")
+print(" ", impares)
+print("  La sumatoria de sus digitos es", conteo2)
