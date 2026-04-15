@@ -1,0 +1,71 @@
+#Ejercicio 1:
+#arreglo = int(input("Ingrese el tamaño del arreglo: "))
+#if arreglo < 1:
+#    print ("Operacion invalida")
+#    break;
+#base = int(input("Ingrese el numero base del que le gustaria generar multiplos: "))
+#a = []
+#for i in range (1, arreglo + 1):
+#    a.append (base * i)
+#print (a)
+
+
+#Ejercicio 2:
+#nom = int(input("Ingrese la cantidad de nombres: "))
+#vecnombre = []
+#for i in range (1, nom + 1):
+#    nombres = (input(" Ingrese los nombres: "))
+#    vecnombre.append(nombres)
+
+#print ("\n", vecnombre)
+
+#veccarac = []
+#for i in vecnombre:
+#    cantidades = len(i)
+#    veccarac.append(cantidades)
+#print ("\n", veccarac)
+
+
+
+#Ejercicio 3:
+print ("\n Bienvenido al interfaz de califiacion de la universidad")
+
+clientes = int(input("\n Indique la cantidad de clientes que atendieron: "))
+cliente = []
+cali = []
+
+for i in range (1, clientes + 1):
+    cliente.append(i)
+    
+for i in range (1, clientes + 1):
+    print ("\n\n   El cliente numero", i, "tuvo una experiencia: (Indiquelo por favor en caracteres numericos)")
+    print ("\n 5. Excelente", "4. Muy buena", "3. Buena", "2. Regular", "1. Mala")
+    exp = int(input(" "))
+    cali.append(exp)
+
+print ("\n Cliente:", cliente)
+print ("\n Experiencia:", cali)
+
+cincos = 0; cuatros = 0; treces = 0; doces = 0; uno = 0;
+for i in cali:
+    if i == 5:
+        cincos = cincos + 1
+    elif i == 4:
+        cuatros = cuatros + 1
+    elif i == 3:
+        treces = treces + 1
+    elif i == 2:
+        doces = doces + 1
+    elif i == 1:
+        uno = uno + 1
+
+rf = max(cincos, cuatros, treces, doces, uno)
+
+sumatoria = 0
+for i in cali:
+    sumatoria = sumatoria + i
+promedio = sumatoria / clientes
+
+print ("\n Frecuencia: ", "\n 5. Excelente", cincos, "\n 4. Muy buena", cuatros, "\n 3. Buena", treces, "\n 2. Regular", doces, "\n 1. Mala", uno)
+print ("\n Mas frecuente: ", rf)
+print ("\n Promedio: ", promedio)
