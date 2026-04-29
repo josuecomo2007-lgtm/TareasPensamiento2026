@@ -1,0 +1,29 @@
+filas = int(input("Filas: "))
+columnas = int(input("Columnas: "))
+
+print("Matriz 1:")
+m1 = []
+for i in range(filas):
+    fila = []
+    for j in range(columnas):
+        fila.append(int(input(f"M1 [{i}][{j}]: ")))
+    m1.append(fila)
+
+print("Matriz 2:")
+m2 = []
+for i in range(filas):
+    fila = []
+    for j in range(columnas):
+        fila.append(int(input(f"M2 [{i}][{j}]: ")))
+    m2.append(fila)
+
+def restar_e_imprimir(matriz_a, matriz_b, f, c):
+    print("Resultado:")
+    for i in range(f):
+        fila_resultado = []
+        for j in range(c):
+            resta = matriz_a[i][j] - matriz_b[i][j]
+            fila_resultado.append(resta)
+        print(fila_resultado)
+
+restar_e_imprimir(m1, m2, filas, columnas)
