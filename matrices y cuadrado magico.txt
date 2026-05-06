@@ -1,0 +1,35 @@
+M= [[1,2,3],[4,5,6],[7,8,9]]
+
+sf = [0,0,0]
+sc = [0,0,0]
+
+for i in range(3):
+    for j in range(3):
+        sf[i] += M[i][j]
+      sc[j] += M[i][j]
+        
+print(M)
+print(sf)
+print(sc)
+
+
+M= [[8,1,6], [3,5,7],[4,9,2]]
+
+sf=[0] * 3
+sc=[0] * 3
+d1= 0
+d2= 0
+
+for i in range(3):
+    d1 += M[i][i]
+    d2 += M[i][2-i]
+    for j in range(3):
+        sf[i]+= M[i][j]
+        sc[j]+= M[i][j]
+        
+es_magico = all (f == 15 for f in sf) and all(c == 15 for c in sc) and d1 == 15 and d2 == 15
+
+print (f"suma filas: {sf}")
+print (f"suma columnas: {sc}")
+print(f"diagonal 1: {d1}, diagonal 2: {d2}")
+print("¿es cuadrado magico?:", es_magico)
